@@ -1,0 +1,64 @@
+#menu{
+	position: fixed;
+	margin: 0px;
+	padding: 0px 10px 10px;
+	left: 0px;
+	top: 0px;
+	color: rgb(204, 0, 0);
+	background-color: rgb(255, 255, 255);
+	border-right: 1px solid rgb(111, 111, 111);
+	overflow: auto;
+	width: 146px;
+	height: 100%;
+	background: url("./resource/menu.png") repeat-y scroll right 0% rgb(243, 243, 243);
+}
+li{
+	padding: 2px 0px;
+	list-style-type:none;
+	text-align:center;
+}
+.mouseon{
+	background: url("./resource/select.png");
+}
+a{
+	text-decoration:none;
+	outline: none !important; 
+	font-family:verdana;
+	font-weight:bold;
+}
+a:hover {
+	text-decoration:underline;
+}
+a:link {
+	color: rgb(38,38,38);
+}
+.info{
+	color: (68,68,68);
+	border: 1px solid rgb(170, 170, 170);
+	background-color: rgb(255, 255, 255);
+	box-shadow: 3px 3px 15px rgb(187, 187, 187);
+}
+.fieldsetup{
+	border-radius: 4px 4px 0px 0px;
+	border: 1px solid rgb(170, 170, 170);
+	padding: 1.5em;
+	background: none repeat scroll 0% 0% rgb(238, 238, 238);
+	text-shadow: 0px 1px 0px rgb(255, 255, 255);
+	box-shadow: 1px 1px 2px rgb(255, 255, 255) inset;
+}
+.fieldsetdown{
+	border: 1px solid rgb(170, 170, 170);
+	padding: 1.5em;
+	box-shadow: 1px 1px 2px rgb(255, 255, 255) inset;
+	text-shadow: 0px 1px 0px rgb(255, 255, 255);
+	background: none repeat scroll 0% 0% rgb(211, 220, 227);
+	margin-top: 0px;
+	border-top: 0px none;
+	text-align: right;
+	border-radius: 0px 0px 4px 4px;
+}
+input{
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(154, 154, 154) rgb(205, 205, 205) rgb(205, 205, 205) rgb(154, 154, 154);
+}

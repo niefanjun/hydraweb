@@ -1,0 +1,20 @@
+.text_name {
+	float: left;
+}
+.text_content{
+	float: left;
+}
+.clear{
+	clear: both;
+}
+.control{
+	width: 300px;
+	height: 150px;
+	position: absolute;
+	margin:-75px 0px 0px -150px;
+	left:50%;
+	top:50%;
+}
+.title{
+	background: rgb(195,195,195);
+}

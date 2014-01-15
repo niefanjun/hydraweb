@@ -1,0 +1,38 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="stylev2.css">
+</head>
+<body>
+<div class="title">SMTP</div>
+<form id="subinfo" action="test.php" method="post" class="control">
+<fieldset class="fieldsetup">
+<div>
+<div class="input-group">
+<span class="input-group-addon">ip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input class="form-control" type="text" name="ip" /></br>
+</div>
+<div class="input-group">
+<span class="input-group-addon">port&nbsp;&nbsp;&nbsp;&nbsp;</span><input class="form-control" type="text" name="port" placeholder="defult"/></br>
+</div>
+<div class="input-group">
+<span class="input-group-addon">thread</span><input class="form-control" type="text" name="thread" placeholder="defult"/></br>
+</div>
+<div class="clear"></div>
+</div>
+<select name="protocol" class="test" value="smtp" style="display:none">
+<option value="telnet">telnet</option>
+<option value="ftp">ftp</option>
+<option value="snmp">snmt</option>
+<option value="smtp" selected="selected">smtp</option>
+<option value="pop3">pop3</option>
+<option value="http">http</option>
+</select>
+</br>
+<input type="checkbox" name="SSL" id="SSL" value="1"/>use SSL
+</br>
+</fieldset>
+<fieldset class="fieldsetdown">
+<input type="submit" class="btn btn-primary" value="go"/>
+</fieldset>
+</form>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="mainstyle_v1.css">
+<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="/bootstrap/js/jquery-2.0.3.js"></script>
+<script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+$(this).parent().addClass('active').siblings().removeClass('active');
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("right_content").innerHTML=xmlhttp.responseText;
+    }
+
+  }
+var path;
+//path="/ajax/ftp.txt?t=" + Math.random();
+path= "result.txt?=";
+path=path + Math.random();
+xmlhttp.open("GET",path,true);
+xmlhttp.send();
+});
+
+$(function(){
+$("a").click(function(e){
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  $(this).parent().addClass('active').siblings().removeClass('active');
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("right_content").innerHTML=xmlhttp.responseText;
+    }
+
+  }
+var path;
+//path="/ajax/ftp.txt?t=" + Math.random();
+path= e.target.href +"?=";
+path=path + Math.random();
+xmlhttp.open("GET",path,true);
+xmlhttp.send();
+
+return false;//阻止链接跳转
+ });
+});
+/*
+$(document).ready(function(){
+	$("li").mouseover(function(){
+		$(this).addClass("mouseon");
+	});
+	$("li").mouseout(function(){
+		$(this).removeClass("mouseon");
+	});
+});
+*/
+</script>
+</head>
+<body>
+<div class="nav nav-pills nav-stacked" id="menu">
+<img id="logo" src="./resource/logo.png">
+<li><a href="ajax/ftp.txt">ftp</a></br></li>
+<li><a href="ajax/telnet.txt">telnet</a></br></li>
+<li><a href="ajax/smtp.txt">smtp</a></br></li>
+<li><a href="ajax/pop3.txt">pop3</a></br></li>
+<li><a href="ajax/http.txt">http</a></br></li>
+<li><a href="ajax/smnp.txt">smnp</a></br></li>
+<li><a href="ajax/mysql.txt">mysql</a></br></li>
+</div>
+<div id="right_content" style="margin: auto auto 50px 150px;"></div>
+</body>
+</html>
